@@ -91,11 +91,9 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'weather_app' / 'static',
-]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'weather_app/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # If you later use `collectstatic` for deployment:
 STATIC_ROOT = BASE_DIR / 'staticfiles'
